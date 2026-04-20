@@ -1,0 +1,30 @@
+<article itemscope itemtype="https://schema.org/NewsArticle">
+    <header>
+        <h1 itemprop="headline">O'zbekistonda yangi texnologiya markazi ochildi</h1>
+        <time itemprop="datePublished" datetime="2026-04-20">2026-yil 20-aprel</time>
+    </header>
+    <div itemprop="articleBody">
+        <p>Bu yangi markaz...</p>
+    </div>
+    <footer>
+        <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <span itemprop="name">Ozodbek</span>
+        </span>
+    </footer>
+</article>
+<!-- 2-mashq -->
+<video id="video" controls width="800" poster="poster.jpg">
+    <source src="your-video.mp4" type="video/mp4">
+</video>
+<button onclick="togglePiP()">Picture-in-Picture</button>
+
+<script>
+async function togglePiP() {
+    const video = document.getElementById('video');
+    if (document.pictureInPictureElement) {
+        await document.exitPictureInPicture();
+    } else if (video.requestPictureInPicture) {
+        await video.requestPictureInPicture();
+    }
+}
+</script>
